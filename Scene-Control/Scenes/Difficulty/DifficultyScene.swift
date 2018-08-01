@@ -9,13 +9,13 @@
 import SpriteKit
 import GameplayKit
 
-class MenuScene: SKScene {
+class DifficultyScene: SKScene {
 	
 	/// GameViewControl setup as reference to handle SceneStates
 	var gameViewController: GameViewController!
 	
 	/// Game Controls
-	var menuControls: MenuControls!
+	var difficultyControls: DifficultyControls!
     
 //    var entities = [GKEntity]()
 //    var graphs = [String : GKGraph]()
@@ -32,7 +32,7 @@ class MenuScene: SKScene {
 		super.init(size: sceneSize)
 		
 		/// Menu Controls
-        menuControls = MenuControls.init(inThisScene: self)
+        difficultyControls = DifficultyControls.init(inThisScene: self)
 		
 		
 		/// Load scene
@@ -56,12 +56,11 @@ class MenuScene: SKScene {
 	override func didMove(to view: SKView) {
 		
 		/// Present Label and Button
-		self.addChild(menuControls.background)
-        self.addChild(menuControls.titleLabel)
-		self.addChild(menuControls.buttonSprite)
-        self.addChild(menuControls.buttonConf)
-        self.addChild(menuControls.buttonGame)
-        
+		self.addChild(difficultyControls.background)
+        self.addChild(difficultyControls.titleLabel)
+        self.addChild(difficultyControls.buttonEasy)
+        self.addChild(difficultyControls.buttonHard)
+        self.addChild(difficultyControls.buttonMenu)
 	}
 	
 	/// Before another Scence will be presented
@@ -77,14 +76,17 @@ class MenuScene: SKScene {
 			
 			/// Exit and return to GameScene
 			if (item.name == "buttonSprite-Game") {
-                gameViewController.sceneStateMachine.enter(DifficultySceneState.self)
+                let transition = SKTransition.flipHorizontal(withDuration: 0.5)
+                let gameScene = AIGameScene(size: self.size)
+                self.view?.presentScene(gameScene, transition: transition)
+                
 			}
             if (item.name == "buttonSprite-2Players") {
-                gameViewController.sceneStateMachine.enter(GameSceneState.self)
+            gameViewController.sceneStateMachine.enter(GameSceneState.self)
                 
             }
-            if (item.name == "buttonSprite-Exit") {
-                exit(0)
+            if (item.name == "buttonSprite-Menu") {
+                gameViewController.sceneStateMachine.enter(MenuSceneState.self)
             }
 		}
 	}

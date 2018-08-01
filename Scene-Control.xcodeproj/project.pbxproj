@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54021FF42112427400C3F56B /* DifficultyControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54021FF32112427400C3F56B /* DifficultyControls.swift */; };
+		54021FF62112429D00C3F56B /* DifficultyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54021FF52112429D00C3F56B /* DifficultyScene.swift */; };
+		54021FF82112431F00C3F56B /* DifficultySceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54021FF72112431F00C3F56B /* DifficultySceneState.swift */; };
 		54528CC020F407C300384A4D /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54528CBF20F407C300384A4D /* MenuScene.swift */; };
 		54528CC220F407DB00384A4D /* MenuControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54528CC120F407DB00384A4D /* MenuControls.swift */; };
 		54528CC420F4087500384A4D /* MenuSceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54528CC320F4087500384A4D /* MenuSceneState.swift */; };
@@ -27,9 +30,19 @@
 		CBEDA33D20ED1F1200891164 /* TwoPlayersControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDA33C20ED1F1200891164 /* TwoPlayersControls.swift */; };
 		CBEDA34120ED212F00891164 /* GameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDA34020ED212F00891164 /* GameControls.swift */; };
 		CBEDA34320ED377C00891164 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDA34220ED377C00891164 /* GameData.swift */; };
+		F45E82BB2110F5C10098D569 /* Bhavuka Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F45E82BA2110F5C10098D569 /* Bhavuka Regular.ttf */; };
+		F48DF2592110E10F00379C8A /* AIGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48DF2582110E10F00379C8A /* AIGameScene.swift */; };
+		F48DF25B2110E13A00379C8A /* AIGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48DF25A2110E13A00379C8A /* AIGameViewController.swift */; };
+		F48DF25E2110E15200379C8A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48DF25D2110E15200379C8A /* Board.swift */; };
+		F48DF2602110E15B00379C8A /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48DF25F2110E15B00379C8A /* Move.swift */; };
+		F48DF2622110E16600379C8A /* Strategist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48DF2612110E16600379C8A /* Strategist.swift */; };
+		F48DF2642110E16F00379C8A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48DF2632110E16F00379C8A /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54021FF32112427400C3F56B /* DifficultyControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DifficultyControls.swift; path = "Scene-Control/Scenes/Difficulty/DifficultyControls.swift"; sourceTree = SOURCE_ROOT; };
+		54021FF52112429D00C3F56B /* DifficultyScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DifficultyScene.swift; path = "Scene-Control/Scenes/Difficulty/DifficultyScene.swift"; sourceTree = SOURCE_ROOT; };
+		54021FF72112431F00C3F56B /* DifficultySceneState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifficultySceneState.swift; sourceTree = "<group>"; };
 		54528CBF20F407C300384A4D /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuScene.swift; path = "Scene-Control/Scenes/Menu/MenuScene.swift"; sourceTree = SOURCE_ROOT; };
 		54528CC120F407DB00384A4D /* MenuControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuControls.swift; path = "Scene-Control/Scenes/Menu/MenuControls.swift"; sourceTree = SOURCE_ROOT; };
 		54528CC320F4087500384A4D /* MenuSceneState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuSceneState.swift; sourceTree = "<group>"; };
@@ -52,6 +65,13 @@
 		CBEDA33C20ED1F1200891164 /* TwoPlayersControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPlayersControls.swift; sourceTree = "<group>"; };
 		CBEDA34020ED212F00891164 /* GameControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControls.swift; sourceTree = "<group>"; };
 		CBEDA34220ED377C00891164 /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
+		F45E82BA2110F5C10098D569 /* Bhavuka Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bhavuka Regular.ttf"; sourceTree = "<group>"; };
+		F48DF2582110E10F00379C8A /* AIGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIGameScene.swift; sourceTree = "<group>"; };
+		F48DF25A2110E13A00379C8A /* AIGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIGameViewController.swift; sourceTree = "<group>"; };
+		F48DF25D2110E15200379C8A /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		F48DF25F2110E15B00379C8A /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		F48DF2612110E16600379C8A /* Strategist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strategist.swift; sourceTree = "<group>"; };
+		F48DF2632110E16F00379C8A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54021FF22112424E00C3F56B /* Difficulty */ = {
+			isa = PBXGroup;
+			children = (
+				54021FF32112427400C3F56B /* DifficultyControls.swift */,
+				54021FF52112429D00C3F56B /* DifficultyScene.swift */,
+			);
+			path = Difficulty;
+			sourceTree = "<group>";
+		};
 		54528CBE20F407A500384A4D /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +137,7 @@
 				CBEDA33220ED164900891164 /* Scenes */,
 				CBEDA33320ED166B00891164 /* SceneStates */,
 				CBEDA32420ED15B500891164 /* Main.storyboard */,
+				F45E82BA2110F5C10098D569 /* Bhavuka Regular.ttf */,
 				CBEDA32720ED15B700891164 /* Assets.xcassets */,
 				CBEDA32920ED15B700891164 /* LaunchScreen.storyboard */,
 				CBEDA32C20ED15B700891164 /* Info.plist */,
@@ -119,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				54528CBE20F407A500384A4D /* Menu */,
+				54021FF22112424E00C3F56B /* Difficulty */,
+				F48DF2572110E0E600379C8A /* AI */,
 				CBEDA33F20ED20E700891164 /* Game */,
 				CBEDA33E20ED20D600891164 /* TwoPlayers */,
 				54528CC520F40F2300384A4D /* Instructions */,
@@ -134,6 +166,7 @@
 				CBEDA33A20ED1BC100891164 /* TwoPlayersSceneState.swift */,
 				54528CCA20F4108400384A4D /* InstructionsSceneState.swift */,
 				54528CC320F4087500384A4D /* MenuSceneState.swift */,
+				54021FF72112431F00C3F56B /* DifficultySceneState.swift */,
 			);
 			path = SceneStates;
 			sourceTree = "<group>";
@@ -155,6 +188,27 @@
 				CBEDA32020ED15B500891164 /* GameScene.swift */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		F48DF2572110E0E600379C8A /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				F48DF25C2110E14200379C8A /* Model */,
+				F48DF2582110E10F00379C8A /* AIGameScene.swift */,
+				F48DF25A2110E13A00379C8A /* AIGameViewController.swift */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
+		F48DF25C2110E14200379C8A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F48DF25D2110E15200379C8A /* Board.swift */,
+				F48DF25F2110E15B00379C8A /* Move.swift */,
+				F48DF2612110E16600379C8A /* Strategist.swift */,
+				F48DF2632110E16F00379C8A /* Player.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +272,7 @@
 				CBEDA32620ED15B500891164 /* Main.storyboard in Resources */,
 				CBEDA32820ED15B700891164 /* Assets.xcassets in Resources */,
 				CBEDA32B20ED15B700891164 /* LaunchScreen.storyboard in Resources */,
+				F45E82BB2110F5C10098D569 /* Bhavuka Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,19 +285,28 @@
 			files = (
 				CBA5D81421002B63001AA9DC /* GameTicTacToe.swift in Sources */,
 				CBEDA32120ED15B500891164 /* GameScene.swift in Sources */,
+				F48DF25E2110E15200379C8A /* Board.swift in Sources */,
 				CBEDA34320ED377C00891164 /* GameData.swift in Sources */,
+				F48DF2642110E16F00379C8A /* Player.swift in Sources */,
 				54528CC020F407C300384A4D /* MenuScene.swift in Sources */,
 				CBEDA33D20ED1F1200891164 /* TwoPlayersControls.swift in Sources */,
 				CBEDA33B20ED1BC100891164 /* TwoPlayersSceneState.swift in Sources */,
+				54021FF62112429D00C3F56B /* DifficultyScene.swift in Sources */,
+				F48DF2602110E15B00379C8A /* Move.swift in Sources */,
+				F48DF25B2110E13A00379C8A /* AIGameViewController.swift in Sources */,
+				54021FF82112431F00C3F56B /* DifficultySceneState.swift in Sources */,
 				54528CC920F40F6200384A4D /* InstructionsControls.swift in Sources */,
 				CBEDA32320ED15B500891164 /* GameViewController.swift in Sources */,
 				54528CC220F407DB00384A4D /* MenuControls.swift in Sources */,
 				CBEDA33920ED1BA600891164 /* GameSceneState.swift in Sources */,
+				F48DF2592110E10F00379C8A /* AIGameScene.swift in Sources */,
 				CBEDA34120ED212F00891164 /* GameControls.swift in Sources */,
 				CBEDA33520ED16E700891164 /* SceneState.swift in Sources */,
 				54528CCB20F4108400384A4D /* InstructionsSceneState.swift in Sources */,
+				54021FF42112427400C3F56B /* DifficultyControls.swift in Sources */,
 				CBEDA31B20ED15B500891164 /* AppDelegate.swift in Sources */,
 				54528CC720F40F4F00384A4D /* InstructionsScene.swift in Sources */,
+				F48DF2622110E16600379C8A /* Strategist.swift in Sources */,
 				54528CC420F4087500384A4D /* MenuSceneState.swift in Sources */,
 				CBEDA33720ED1AC100891164 /* TwoPlayersScene.swift in Sources */,
 			);
@@ -389,16 +453,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 745E977PLG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Scene-Control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cartwheelgalaxy.games.TicTacToe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luisreyes.Titactoe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -407,16 +471,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 745E977PLG;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Scene-Control/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cartwheelgalaxy.games.TicTacToe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luisreyes.Titactoe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

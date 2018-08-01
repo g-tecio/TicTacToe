@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class MenuSceneState: SceneState {
+class DifficultySceneState: SceneState {
 	
 	// MARK: Properties
 	
@@ -27,7 +27,7 @@ class MenuSceneState: SceneState {
 		
 		/// Present scene
 		if let skView = gameViewController.view as! SKView? {
-			skView.presentScene(gameViewController.menuScene, transition: SKTransition.flipHorizontal(withDuration: 0.3))
+			skView.presentScene(gameViewController.difficultyScene, transition: SKTransition.flipHorizontal(withDuration: 0.3))
 		}
 	}
 	
@@ -36,7 +36,7 @@ class MenuSceneState: SceneState {
 	}
 	
 	override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-		if (stateClass is GameSceneState.Type) || (stateClass is TwoPlayersSceneState.Type) || (stateClass is InstructionsSceneState.Type) || (stateClass is TwoPlayersSceneState.Type) || (stateClass is DifficultySceneState.Type) {
+		if (stateClass is GameSceneState.Type) || (stateClass is TwoPlayersSceneState.Type) || (stateClass is InstructionsSceneState.Type) || (stateClass is TwoPlayersSceneState.Type) || (stateClass is MenuSceneState.Type) {
 			return true
 		}
 		else {

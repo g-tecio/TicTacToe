@@ -41,9 +41,9 @@ class GameScene: SKScene {
 			self.scaleMode = .fill
 			
 			// TODO: Comment or remove before release to App Store
-			skView.ignoresSiblingOrder = true
-			skView.showsFPS = true
-			skView.showsNodeCount = true
+//            skView.ignoresSiblingOrder = true
+//            skView.showsFPS = true
+//            skView.showsNodeCount = true
 		}
 	}
 
@@ -62,6 +62,34 @@ class GameScene: SKScene {
         self.addChild(gameControls.buttonExit)
         self.addChild(gameControls.net)
 		self.addChild(gameControls.message)
+        self.addChild(gameControls.turnO)
+        self.addChild(gameControls.turnX)
+        self.addChild(gameControls.turnXWin)
+        self.addChild(gameControls.turnOWin)
+        self.addChild(gameControls.tie)
+        
+        self.addChild(gameControls.diag)
+        gameControls.diag.isHidden = true
+        self.addChild(gameControls.diag2)
+        gameControls.diag2.isHidden = true
+        self.addChild(gameControls.lineh)
+        gameControls.lineh.isHidden = true
+        self.addChild(gameControls.linev)
+        gameControls.linev.isHidden = true
+        self.addChild(gameControls.linehtop)
+        gameControls.linehtop.isHidden = true
+        self.addChild(gameControls.linevleft)
+        gameControls.linevleft.isHidden = true
+        self.addChild(gameControls.linehbot)
+        gameControls.linehbot.isHidden = true
+        self.addChild(gameControls.linevright)
+        gameControls.linevright.isHidden = true
+        
+        gameControls.turnO.isHidden = true
+        gameControls.turnXWin.isHidden = true
+        gameControls.turnOWin.isHidden = true
+        gameControls.tie.isHidden = true
+
 		
 		gameTicTacToe.gameState = 1
 		gameTicTacToe.board = [[0,0,0],[0,0,0],[0,0,0]]
@@ -72,8 +100,9 @@ class GameScene: SKScene {
             self.addChild(gameTicTacToe.placeholder[i])
         }
 		
-		gameControls.message.text = "X Turn"
-		
+        gameControls.turnX.isHidden = false
+
+
 	}
 	
 	/// Before another Scence will be presented
@@ -89,11 +118,12 @@ class GameScene: SKScene {
 			
 			/// Exit and return to GameScene
 			if (item.name == "buttonSprite-Exit") {
-				exit(0)
+                gameViewController.sceneStateMachine.enter(MenuSceneState
+                    .self)
 			}
 			else {
 				if (item.name == "buttonSprite-Replay") || (gameTicTacToe.gameState >= 3){
-					gameViewController.sceneStateMachine.enter(MenuSceneState.self)
+                    ///ADD Reply Funtion 
 				}
 				else {
 					for i in 0...8 {
@@ -106,6 +136,5 @@ class GameScene: SKScene {
 				}
 			}
 		}
-	}
-	
+	}//END touches Began
 }

@@ -31,7 +31,7 @@ struct InstructionsControls {
 		titleLabel.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(3/4)))
 		
 		/// Exit  Button
-		buttonSprite = SKSpriteNode.init(imageNamed: "Button")
+		buttonSprite = SKSpriteNode.init(imageNamed: "")
 		buttonSprite.name = "buttonSprite-MenuInst"
 		buttonSprite.zPosition = 1
 		buttonSprite.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*1/13))

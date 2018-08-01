@@ -24,6 +24,7 @@ class GameViewController: UIViewController {
 	var twoPlayersScene: TwoPlayersScene!
     var menuScene: MenuScene!
     var instructionsScene: InstructionsScene!
+    var difficultyScene: DifficultyScene!
 	
 	// MARK: Override Methods
 	
@@ -38,6 +39,9 @@ class GameViewController: UIViewController {
         
 		/// GameScene Setup
 		gameScene = GameScene.init(sceneSize: view.bounds.size, referenceGVC: self)
+        
+        /// GameScene Setup
+        difficultyScene = DifficultyScene.init(sceneSize: view.bounds.size, referenceGVC: self)
 		
 		/// ConfigScene Setup
 		twoPlayersScene = TwoPlayersScene.init(sceneSize: view.bounds.size, referenceGVC: self)
@@ -46,6 +50,7 @@ class GameViewController: UIViewController {
 		sceneStateMachine = GKStateMachine(states: [	GameSceneState(referenceGVC: self),
                                                         MenuSceneState(referenceGVC: self),
                                                         InstructionsSceneState(referenceGVC: self),
+                                                        DifficultySceneState(referenceGVC: self),
 														TwoPlayersSceneState(referenceGVC: self)	] )
 		sceneStateMachine.enter(MenuSceneState.self)
 	}

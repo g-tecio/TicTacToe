@@ -36,7 +36,7 @@ class MenuSceneState: SceneState {
 	}
 	
 	override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-		if (stateClass is GameSceneState.Type) || (stateClass is TwoPlayersSceneState.Type) || (stateClass is InstructionsSceneState.Type) || (stateClass is TwoPlayersSceneState.Type) || (stateClass is DifficultySceneState.Type) {
+		if (stateClass is GameSceneState.Type) || (stateClass is InstructionsSceneState.Type) || (stateClass is DifficultySceneState.Type) {
 			return true
 		}
 		else {

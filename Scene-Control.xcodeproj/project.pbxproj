@@ -24,10 +24,7 @@
 		CBEDA32820ED15B700891164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEDA32720ED15B700891164 /* Assets.xcassets */; };
 		CBEDA32B20ED15B700891164 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBEDA32920ED15B700891164 /* LaunchScreen.storyboard */; };
 		CBEDA33520ED16E700891164 /* SceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDA33420ED16E700891164 /* SceneState.swift */; };
-		CBEDA33720ED1AC100891164 /* TwoPlayersScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDA33620ED1AC100891164 /* TwoPlayersScene.swift */; };
 		CBEDA33920ED1BA600891164 /* GameSceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDA33820ED1BA600891164 /* GameSceneState.swift */; };
-		CBEDA33B20ED1BC100891164 /* TwoPlayersSceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDA33A20ED1BC100891164 /* TwoPlayersSceneState.swift */; };
-		CBEDA33D20ED1F1200891164 /* TwoPlayersControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDA33C20ED1F1200891164 /* TwoPlayersControls.swift */; };
 		CBEDA34120ED212F00891164 /* GameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDA34020ED212F00891164 /* GameControls.swift */; };
 		CBEDA34320ED377C00891164 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDA34220ED377C00891164 /* GameData.swift */; };
 		F45E82BB2110F5C10098D569 /* Bhavuka Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F45E82BA2110F5C10098D569 /* Bhavuka Regular.ttf */; };
@@ -59,10 +56,7 @@
 		CBEDA32A20ED15B700891164 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBEDA32C20ED15B700891164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBEDA33420ED16E700891164 /* SceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneState.swift; sourceTree = "<group>"; };
-		CBEDA33620ED1AC100891164 /* TwoPlayersScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPlayersScene.swift; sourceTree = "<group>"; };
 		CBEDA33820ED1BA600891164 /* GameSceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneState.swift; sourceTree = "<group>"; };
-		CBEDA33A20ED1BC100891164 /* TwoPlayersSceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPlayersSceneState.swift; sourceTree = "<group>"; };
-		CBEDA33C20ED1F1200891164 /* TwoPlayersControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPlayersControls.swift; sourceTree = "<group>"; };
 		CBEDA34020ED212F00891164 /* GameControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControls.swift; sourceTree = "<group>"; };
 		CBEDA34220ED377C00891164 /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		F45E82BA2110F5C10098D569 /* Bhavuka Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bhavuka Regular.ttf"; sourceTree = "<group>"; };
@@ -152,7 +146,6 @@
 				54021FF22112424E00C3F56B /* Difficulty */,
 				F48DF2572110E0E600379C8A /* AI */,
 				CBEDA33F20ED20E700891164 /* Game */,
-				CBEDA33E20ED20D600891164 /* TwoPlayers */,
 				54528CC520F40F2300384A4D /* Instructions */,
 			);
 			path = Scenes;
@@ -163,21 +156,11 @@
 			children = (
 				CBEDA33420ED16E700891164 /* SceneState.swift */,
 				CBEDA33820ED1BA600891164 /* GameSceneState.swift */,
-				CBEDA33A20ED1BC100891164 /* TwoPlayersSceneState.swift */,
 				54528CCA20F4108400384A4D /* InstructionsSceneState.swift */,
 				54528CC320F4087500384A4D /* MenuSceneState.swift */,
 				54021FF72112431F00C3F56B /* DifficultySceneState.swift */,
 			);
 			path = SceneStates;
-			sourceTree = "<group>";
-		};
-		CBEDA33E20ED20D600891164 /* TwoPlayers */ = {
-			isa = PBXGroup;
-			children = (
-				CBEDA33C20ED1F1200891164 /* TwoPlayersControls.swift */,
-				CBEDA33620ED1AC100891164 /* TwoPlayersScene.swift */,
-			);
-			path = TwoPlayers;
 			sourceTree = "<group>";
 		};
 		CBEDA33F20ED20E700891164 /* Game */ = {
@@ -289,8 +272,6 @@
 				CBEDA34320ED377C00891164 /* GameData.swift in Sources */,
 				F48DF2642110E16F00379C8A /* Player.swift in Sources */,
 				54528CC020F407C300384A4D /* MenuScene.swift in Sources */,
-				CBEDA33D20ED1F1200891164 /* TwoPlayersControls.swift in Sources */,
-				CBEDA33B20ED1BC100891164 /* TwoPlayersSceneState.swift in Sources */,
 				54021FF62112429D00C3F56B /* DifficultyScene.swift in Sources */,
 				F48DF2602110E15B00379C8A /* Move.swift in Sources */,
 				F48DF25B2110E13A00379C8A /* AIGameViewController.swift in Sources */,
@@ -308,7 +289,6 @@
 				54528CC720F40F4F00384A4D /* InstructionsScene.swift in Sources */,
 				F48DF2622110E16600379C8A /* Strategist.swift in Sources */,
 				54528CC420F4087500384A4D /* MenuSceneState.swift in Sources */,
-				CBEDA33720ED1AC100891164 /* TwoPlayersScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

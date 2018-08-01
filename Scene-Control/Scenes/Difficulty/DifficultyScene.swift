@@ -60,7 +60,7 @@ class DifficultyScene: SKScene {
         self.addChild(difficultyControls.titleLabel)
         self.addChild(difficultyControls.buttonEasy)
         self.addChild(difficultyControls.buttonHard)
-        self.addChild(difficultyControls.buttonMenu)
+//        self.addChild(difficultyControls.buttonMenu)
 	}
 	
 	/// Before another Scence will be presented
@@ -75,7 +75,7 @@ class DifficultyScene: SKScene {
 			let item = atPoint(location)
 			
 			/// Exit and return to GameScene
-			if (item.name == "buttonSprite-Game") {
+			if (item.name == "buttonSprite-Easy") {
                 let transition = SKTransition.flipHorizontal(withDuration: 0.5)
                 let gameScene = AIGameScene(size: self.size)
                 self.view?.presentScene(gameScene, transition: transition)
@@ -84,9 +84,6 @@ class DifficultyScene: SKScene {
             if (item.name == "buttonSprite-2Players") {
             gameViewController.sceneStateMachine.enter(GameSceneState.self)
                 
-            }
-            if (item.name == "buttonSprite-Menu") {
-                gameViewController.sceneStateMachine.enter(MenuSceneState.self)
             }
 		}
 	}

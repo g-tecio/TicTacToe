@@ -16,9 +16,6 @@ struct MenuControls {
 	/// Exit Button and Label
 	let buttonSprite: SKSpriteNode
     
-    /// Configuration Button
-    let buttonConf:SKSpriteNode
-    
     /// Game Button
     let buttonGame:SKSpriteNode
     
@@ -43,27 +40,19 @@ struct MenuControls {
         buttonGame = SKSpriteNode.init(imageNamed: "ButtonPlay")
         buttonGame.name = "buttonSprite-Game"
         buttonGame.zPosition = 3
-        buttonGame.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*6/15))
+        buttonGame.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*5/15))
 		
 		/// Instructions  Button
 		buttonSprite = SKSpriteNode.init(imageNamed: "Button2Players")
 		buttonSprite.name = "buttonSprite-2Players"
 		buttonSprite.zPosition = 3
-		buttonSprite.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*4/15))
-		
-        
-        /// Exit Button
-        buttonConf = SKSpriteNode.init(imageNamed: "ButtonExitMain")
-        buttonConf.name = "buttonSprite-Exit"
-        buttonConf.zPosition = 3
-        buttonConf.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*2/15))
+		buttonSprite.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*3/15))
         
         /// Resizing depending to screen size
         let resizeFactorX:CGFloat = inThisScene.size.width/380.0
         let resizeFactorY:CGFloat = inThisScene.size.height/850.0
         let originalSize = buttonSprite.size
         buttonSprite.size = CGSize(width: originalSize.width*resizeFactorX/3, height: originalSize.height*resizeFactorY/2.5)
-        buttonConf.size = CGSize(width: originalSize.width*resizeFactorX/3, height: originalSize.height*resizeFactorY/2.5)
         buttonGame.size = CGSize(width: originalSize.width*resizeFactorX/3, height: originalSize.height*resizeFactorY/2.5)
         
         /// Resizing Title

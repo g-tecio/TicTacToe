@@ -14,7 +14,7 @@ struct GameControls {
 	
 	/// Buttons and Labels
 	let buttonReplay: SKSpriteNode
-    let buttonExit: SKSpriteNode
+    let buttonMenu: SKSpriteNode
     let net: SKSpriteNode
     let background: SKSpriteNode
 	let message: SKLabelNode
@@ -57,11 +57,11 @@ struct GameControls {
 		buttonReplay.zPosition = 3
 		buttonReplay.position = CGPoint(x: gameScene.size.width/2, y: (gameScene.size.height*7/40))
         
-        /// Replay  Button
-        buttonExit = SKSpriteNode.init(imageNamed: "ButtonExit")
-        buttonExit.name = "buttonSprite-Exit"
-        buttonExit.zPosition = 3
-        buttonExit.position = CGPoint(x: gameScene.size.width/2, y: (gameScene.size.height*3/40))
+        /// Return Menu Button
+        buttonMenu = SKSpriteNode.init(imageNamed: "ButtonMenu")
+        buttonMenu.name = "buttonSprite-Menu"
+        buttonMenu.zPosition = 3
+        buttonMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*3/40))
         
         /// Player X turn
         turnX = SKSpriteNode.init(imageNamed: "TurnX")
@@ -157,7 +157,7 @@ struct GameControls {
         let resizeFactorY:CGFloat = gameScene.size.height/599.0
         let originalSize = buttonReplay.size
         buttonReplay.size = CGSize(width: originalSize.width*resizeFactorX/2.5, height: originalSize.height*resizeFactorY/2.8)
-        buttonExit.size = CGSize(width: originalSize.width*resizeFactorX/3.4, height: originalSize.height*resizeFactorY/3.2)
+        buttonMenu.size = CGSize(width: originalSize.width*resizeFactorX/3, height: originalSize.height*resizeFactorY/3)
         turnX.size = CGSize(width: originalSize.width*resizeFactorX/1.5
             , height: originalSize.height*resizeFactorY/2.2)
         turnO.size = CGSize(width: originalSize.width*resizeFactorX/1.5

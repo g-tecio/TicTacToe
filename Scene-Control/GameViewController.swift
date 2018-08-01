@@ -21,7 +21,6 @@ class GameViewController: UIViewController {
 	
 	/// Scenes
 	var gameScene: GameScene!
-	var twoPlayersScene: TwoPlayersScene!
     var menuScene: MenuScene!
     var instructionsScene: InstructionsScene!
     var difficultyScene: DifficultyScene!
@@ -43,15 +42,11 @@ class GameViewController: UIViewController {
         /// GameScene Setup
         difficultyScene = DifficultyScene.init(sceneSize: view.bounds.size, referenceGVC: self)
 		
-		/// ConfigScene Setup
-		twoPlayersScene = TwoPlayersScene.init(sceneSize: view.bounds.size, referenceGVC: self)
-		
 		/// Creates SceneStateMachine and adds states, then enters GameSceneState
 		sceneStateMachine = GKStateMachine(states: [	GameSceneState(referenceGVC: self),
                                                         MenuSceneState(referenceGVC: self),
                                                         InstructionsSceneState(referenceGVC: self),
-                                                        DifficultySceneState(referenceGVC: self),
-														TwoPlayersSceneState(referenceGVC: self)	] )
+                                                        DifficultySceneState(referenceGVC: self)	] )
 		sceneStateMachine.enter(MenuSceneState.self)
 	}
 

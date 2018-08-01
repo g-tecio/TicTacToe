@@ -59,7 +59,7 @@ class GameScene: SKScene {
 		/// Present Label and Button
         self.addChild(gameControls.background)
 		self.addChild(gameControls.buttonReplay)
-        self.addChild(gameControls.buttonExit)
+        self.addChild(gameControls.buttonMenu)
         self.addChild(gameControls.net)
 		self.addChild(gameControls.message)
         self.addChild(gameControls.turnO)
@@ -117,7 +117,7 @@ class GameScene: SKScene {
 			let item = atPoint(location)
 			
 			/// Exit and return to GameScene
-			if (item.name == "buttonSprite-Exit") {
+			if (item.name == "buttonSprite-Menu") {
                 gameViewController.sceneStateMachine.enter(MenuSceneState
                     .self)
 			}

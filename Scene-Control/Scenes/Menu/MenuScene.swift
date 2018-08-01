@@ -59,7 +59,6 @@ class MenuScene: SKScene {
 		self.addChild(menuControls.background)
         self.addChild(menuControls.titleLabel)
 		self.addChild(menuControls.buttonSprite)
-        self.addChild(menuControls.buttonConf)
         self.addChild(menuControls.buttonGame)
         
 	}

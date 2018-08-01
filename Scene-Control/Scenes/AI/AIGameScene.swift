@@ -23,7 +23,7 @@ class AIGameScene: SKScene {
     var strategist: Strategist!
     
     
-    let buttonExit = SKSpriteNode(imageNamed: "ButtonExit")
+    let buttonMenu = SKSpriteNode(imageNamed: "ButtonMenu")
     let turnO = SKSpriteNode(imageNamed: "TurnO")
     let turnX = SKSpriteNode(imageNamed: "TurnX")
     
@@ -61,11 +61,11 @@ class AIGameScene: SKScene {
 
         /// Replay  Button
        
-        buttonExit.name = "buttonSprite-Exit"
-        buttonExit.zPosition = 3
-        buttonExit.position.y = -(view.frame.height / 2) + (borderHeight / 2)
+        buttonMenu.name = "buttonSprite-Menu"
+        buttonMenu.zPosition = 3
+        buttonMenu.position.y = -(view.frame.height / 2) + (borderHeight / 2)
         
-        addChild(buttonExit)
+        addChild(buttonMenu)
         
         
         /// Player O turn
@@ -85,12 +85,12 @@ class AIGameScene: SKScene {
         /// Resizing buttons
         let resizeFactorX:CGFloat = frame.size.width/407.0
         let resizeFactorY:CGFloat = frame.size.height/599.0
-        let originalSize = buttonExit.size
+        let originalSize = buttonMenu.size
         turnX.size = CGSize(width: originalSize.width*resizeFactorX/1.5
             , height: originalSize.height*resizeFactorY/2.2)
         turnO.size = CGSize(width: originalSize.width*resizeFactorX/1.5
             , height: originalSize.height*resizeFactorY/2.2)
-        buttonExit.size = CGSize(width: originalSize.width*resizeFactorX/3.4, height: originalSize.height*resizeFactorY/3.2)
+        buttonMenu.size = CGSize(width: originalSize.width*resizeFactorX/3.4, height: originalSize.height*resizeFactorY/3.2)
         
 ///Add who won
 //        turnXWin.size = CGSize(width: originalSize.width*resizeFactorX/1.4

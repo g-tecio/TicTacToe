@@ -13,6 +13,33 @@ class AIGameScene: SKScene {
     
     var gameViewController: GameViewController!
     
+    /// Custom Initializer
+    init(sceneSize: CGSize, referenceGVC: GameViewController) {
+        
+        /// Set reference of GameViewControl
+        gameViewController = referenceGVC
+        
+        /// Create scene from code
+        super.init(size: sceneSize)
+        
+        
+        /// Load scene
+        if let skView = gameViewController.view as! SKView? {
+            self.size = skView.bounds.size
+            self.scaleMode = .fill
+            
+            // TODO: Comment or remove before release to App Store
+            skView.ignoresSiblingOrder = true
+            skView.showsFPS = true
+            skView.showsNodeCount = true
+        }
+    }
+    
+    /// Included because is a requisite if a custom Init is used
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Properties
     
     var boardNode: SKSpriteNode!
@@ -314,7 +341,7 @@ class AIGameScene: SKScene {
             
             /// Exit and return to GameScene
             
-            if (item.name == "buttonSprite-Exit"){
+            if (item.name == "buttonSprite-Menu"){
                 gameViewController.sceneStateMachine.enter(MenuSceneState
                     .self)
             }

@@ -36,7 +36,8 @@ class DifficultySceneState: SceneState {
 	}
 	
 	override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-		if (stateClass is GameSceneState.Type) || (stateClass is MenuSceneState.Type) {
+		if (stateClass is GameSceneState.Type) || (stateClass is MenuSceneState.Type) || (stateClass is AISceneState
+            .Type) {
 			return true
 		}
 		else {

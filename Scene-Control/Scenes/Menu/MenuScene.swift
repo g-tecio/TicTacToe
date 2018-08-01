@@ -82,9 +82,6 @@ class MenuScene: SKScene {
                 gameViewController.sceneStateMachine.enter(GameSceneState.self)
                 
             }
-            if (item.name == "buttonSprite-Exit") {
-                exit(0)
-            }
 		}
 	}
 	

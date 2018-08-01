@@ -76,10 +76,7 @@ class DifficultyScene: SKScene {
 			
 			/// Exit and return to GameScene
 			if (item.name == "buttonSprite-Easy") {
-                let transition = SKTransition.flipHorizontal(withDuration: 0.5)
-                let gameScene = AIGameScene(size: self.size)
-                self.view?.presentScene(gameScene, transition: transition)
-                
+            gameViewController.sceneStateMachine.enter(AISceneState.self)
 			}
             if (item.name == "buttonSprite-2Players") {
             gameViewController.sceneStateMachine.enter(GameSceneState.self)

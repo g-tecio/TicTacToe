@@ -11,6 +11,8 @@
 		54021FF62112429D00C3F56B /* DifficultyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54021FF52112429D00C3F56B /* DifficultyScene.swift */; };
 		54021FF82112431F00C3F56B /* DifficultySceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54021FF72112431F00C3F56B /* DifficultySceneState.swift */; };
 		54021FFA21125FA300C3F56B /* AISceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54021FF921125FA300C3F56B /* AISceneState.swift */; };
+		5434960B211358F500024EB7 /* AIGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434960A211358F500024EB7 /* AIGameScene.swift */; };
+		5434960F21136FD400024EB7 /* AIGameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434960E21136FD400024EB7 /* AIGameControls.swift */; };
 		54528CC020F407C300384A4D /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54528CBF20F407C300384A4D /* MenuScene.swift */; };
 		54528CC220F407DB00384A4D /* MenuControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54528CC120F407DB00384A4D /* MenuControls.swift */; };
 		54528CC420F4087500384A4D /* MenuSceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54528CC320F4087500384A4D /* MenuSceneState.swift */; };
@@ -29,7 +31,6 @@
 		CBEDA34120ED212F00891164 /* GameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDA34020ED212F00891164 /* GameControls.swift */; };
 		CBEDA34320ED377C00891164 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEDA34220ED377C00891164 /* GameData.swift */; };
 		F45E82BB2110F5C10098D569 /* Bhavuka Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F45E82BA2110F5C10098D569 /* Bhavuka Regular.ttf */; };
-		F48DF2592110E10F00379C8A /* AIGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48DF2582110E10F00379C8A /* AIGameScene.swift */; };
 		F48DF25E2110E15200379C8A /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48DF25D2110E15200379C8A /* Board.swift */; };
 		F48DF2602110E15B00379C8A /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48DF25F2110E15B00379C8A /* Move.swift */; };
 		F48DF2622110E16600379C8A /* Strategist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48DF2612110E16600379C8A /* Strategist.swift */; };
@@ -41,6 +42,8 @@
 		54021FF52112429D00C3F56B /* DifficultyScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DifficultyScene.swift; path = "Scene-Control/Scenes/Difficulty/DifficultyScene.swift"; sourceTree = SOURCE_ROOT; };
 		54021FF72112431F00C3F56B /* DifficultySceneState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DifficultySceneState.swift; sourceTree = "<group>"; };
 		54021FF921125FA300C3F56B /* AISceneState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AISceneState.swift; sourceTree = "<group>"; };
+		5434960A211358F500024EB7 /* AIGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIGameScene.swift; sourceTree = "<group>"; };
+		5434960E21136FD400024EB7 /* AIGameControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIGameControls.swift; sourceTree = "<group>"; };
 		54528CBF20F407C300384A4D /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuScene.swift; path = "Scene-Control/Scenes/Menu/MenuScene.swift"; sourceTree = SOURCE_ROOT; };
 		54528CC120F407DB00384A4D /* MenuControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuControls.swift; path = "Scene-Control/Scenes/Menu/MenuControls.swift"; sourceTree = SOURCE_ROOT; };
 		54528CC320F4087500384A4D /* MenuSceneState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuSceneState.swift; sourceTree = "<group>"; };
@@ -61,7 +64,6 @@
 		CBEDA34020ED212F00891164 /* GameControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControls.swift; sourceTree = "<group>"; };
 		CBEDA34220ED377C00891164 /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		F45E82BA2110F5C10098D569 /* Bhavuka Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bhavuka Regular.ttf"; sourceTree = "<group>"; };
-		F48DF2582110E10F00379C8A /* AIGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIGameScene.swift; sourceTree = "<group>"; };
 		F48DF25D2110E15200379C8A /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		F48DF25F2110E15B00379C8A /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		F48DF2612110E16600379C8A /* Strategist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strategist.swift; sourceTree = "<group>"; };
@@ -177,8 +179,9 @@
 		F48DF2572110E0E600379C8A /* AI */ = {
 			isa = PBXGroup;
 			children = (
+				5434960E21136FD400024EB7 /* AIGameControls.swift */,
+				5434960A211358F500024EB7 /* AIGameScene.swift */,
 				F48DF25C2110E14200379C8A /* Model */,
-				F48DF2582110E10F00379C8A /* AIGameScene.swift */,
 			);
 			path = AI;
 			sourceTree = "<group>";
@@ -276,11 +279,12 @@
 				F48DF2602110E15B00379C8A /* Move.swift in Sources */,
 				54021FF82112431F00C3F56B /* DifficultySceneState.swift in Sources */,
 				54528CC920F40F6200384A4D /* InstructionsControls.swift in Sources */,
+				5434960B211358F500024EB7 /* AIGameScene.swift in Sources */,
 				CBEDA32320ED15B500891164 /* GameViewController.swift in Sources */,
 				54021FFA21125FA300C3F56B /* AISceneState.swift in Sources */,
 				54528CC220F407DB00384A4D /* MenuControls.swift in Sources */,
 				CBEDA33920ED1BA600891164 /* GameSceneState.swift in Sources */,
-				F48DF2592110E10F00379C8A /* AIGameScene.swift in Sources */,
+				5434960F21136FD400024EB7 /* AIGameControls.swift in Sources */,
 				CBEDA34120ED212F00891164 /* GameControls.swift in Sources */,
 				CBEDA33520ED16E700891164 /* SceneState.swift in Sources */,
 				54528CCB20F4108400384A4D /* InstructionsSceneState.swift in Sources */,

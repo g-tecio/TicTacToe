@@ -13,6 +13,9 @@ class AIGameScene: SKScene {
     
     var gameViewController: GameViewController!
     
+    /// Game Controls
+    var aiGameControls: AIGameControls!
+    
     /// Custom Initializer
     init(sceneSize: CGSize, referenceGVC: GameViewController) {
         
@@ -22,6 +25,8 @@ class AIGameScene: SKScene {
         /// Create scene from code
         super.init(size: sceneSize)
         
+        /// Menu Controls
+        aiGameControls = AIGameControls.init(inThisScene: self)
         
         /// Load scene
         if let skView = gameViewController.view as! SKView? {
@@ -48,7 +53,7 @@ class AIGameScene: SKScene {
     
     var board = Board()
     var strategist: Strategist!
-    
+    var gameOverTitle: String? = nil
     
     let buttonMenu = SKSpriteNode(imageNamed: "ButtonMenu")
     let turnO = SKSpriteNode(imageNamed: "TurnO")
@@ -59,6 +64,9 @@ class AIGameScene: SKScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        self.addChild(aiGameControls.buttonMenu)
+        self.addChild(aiGameControls.buttonReplay)
+        
         anchorPoint = CGPoint(x: 0.5, y: 0.5)
         
         let backgroundNode = SKSpriteNode(imageNamed: "Background")
@@ -68,6 +76,7 @@ class AIGameScene: SKScene {
         let boardWidth = view.frame.width - 24
         let borderHeight = ((view.frame.height - boardWidth) / 2) - 24
         
+        /// Net
         boardNode = SKSpriteNode(
             texture: SKTexture(imageNamed: "Net"),
             size: CGSize(width: boardWidth, height: boardWidth)
@@ -77,61 +86,23 @@ class AIGameScene: SKScene {
         
         addChild(boardNode)
         
-        let headerNode = SKSpriteNode(
-            color: UIColor(red: 46/255, green: 46/255, blue: 46/255, alpha: 1),
-            size: CGSize(width: view.frame.width, height: borderHeight)
-        )
-        headerNode.alpha = 0
-        headerNode.position.y = (view.frame.height / 2) - (borderHeight / 2)
-        addChild(headerNode)
-        
-
-        /// Replay  Button
-       
-        buttonMenu.name = "buttonSprite-Menu"
-        buttonMenu.zPosition = 3
-        buttonMenu.position.y = -(view.frame.height / 2) + (borderHeight / 2)
-        
-        addChild(buttonMenu)
-        
-        
         /// Player O turn
- 
-        turnO.name = "buttonSprite-TurnO"
-        turnO.zPosition = 7
-        turnO.position = headerNode.position
-        turnO.isHidden = true
+        self.addChild(aiGameControls.turnO)
         
         /// Player X turn
-
-        turnX.name = "buttonSprite-TurnX"
-        turnX.zPosition = 7
-        turnX.position = headerNode.position
-        turnX.isHidden = true
+        self.addChild(aiGameControls.turnX)
         
-        /// Resizing buttons
-        let resizeFactorX:CGFloat = frame.size.width/407.0
-        let resizeFactorY:CGFloat = frame.size.height/599.0
-        let originalSize = buttonMenu.size
-        turnX.size = CGSize(width: originalSize.width*resizeFactorX/1.5
-            , height: originalSize.height*resizeFactorY/2.2)
-        turnO.size = CGSize(width: originalSize.width*resizeFactorX/1.5
-            , height: originalSize.height*resizeFactorY/2.2)
-        buttonMenu.size = CGSize(width: originalSize.width*resizeFactorX/3.4, height: originalSize.height*resizeFactorY/3.2)
-        
-///Add who won
-//        turnXWin.size = CGSize(width: originalSize.width*resizeFactorX/1.4
-//            , height: originalSize.height*resizeFactorY/2.6)
-//        turnOWin.size = CGSize(width: originalSize.width*resizeFactorX/1.4
-//            , height: originalSize.height*resizeFactorY/2.6)
-        
-        addChild(turnO)
-        addChild(turnX)
+        ///Add who won
+        //        turnXWin.size = CGSize(width: originalSize.width*resizeFactorX/1.4
+        //            , height: originalSize.height*resizeFactorY/2.6)
+        //        turnOWin.size = CGSize(width: originalSize.width*resizeFactorX/1.4
+        //            , height: originalSize.height*resizeFactorY/2.6)
         
         
         
         
-
+        
+        
         
         strategist = Strategist(board: board)
         
@@ -159,43 +130,29 @@ class AIGameScene: SKScene {
     }
     
     fileprivate func updateGame() {
-        var gameOverTitle: String? = nil
         
         if let winner = board.winningPlayer, winner == board.currentPlayer {
             gameOverTitle = "\(winner.name) Wins!"
         } else if board.isFull {
-            gameOverTitle = "Draw"
-        }
-        
-        if gameOverTitle != nil {
-            let alert = UIAlertController(title: gameOverTitle, message: nil, preferredStyle: .alert)
-            let alertAction = UIAlertAction(title: "Play Again", style: .default) { _ in
-                self.resetGame()
-                self.updateGame()
-            }
-            
-            alert.addAction(alertAction)
-            view?.window?.rootViewController?.present(alert, animated: true)
-            
-            return
+            gameOverTitle = "TIE"
         }
         
         board.currentPlayer = board.currentPlayer.opponent
         
         if board.currentPlayer.name == "X" {
-            turnX.isHidden = false
-            turnO.isHidden = true
+            aiGameControls.turnX.isHidden = false
+            aiGameControls.turnO.isHidden = true
         }
         if board.currentPlayer.name == "O" {
-            turnX.isHidden = true
-            turnO.isHidden = false
+            aiGameControls.turnX.isHidden = true
+            aiGameControls.turnO.isHidden = false
         }
-        
-        //informationLabel.text = "Player \(board.currentPlayer.name) Turn"
         
         if board.currentPlayer.value == .brain {
-            processAIMove()
+                processAIMove()
         }
+    
+        //informationLabel.text = "Player \(board.currentPlayer.name) Turn"
     }
     
     fileprivate func updateBoard(with x: Int, y: Int) {
@@ -210,11 +167,17 @@ class AIGameScene: SKScene {
         
         var nodeImageName: String
         
+        if (gameOverTitle != nil ) {
+            board.currentPlayer.name = "YOLO"
+            
+        } else {
+        
         //Image Name for the board
         if board.currentPlayer.value == .zombie {
             nodeImageName = "circle"
         } else {
             nodeImageName = "cross"
+        }
         }
         
         let pieceNode = SKSpriteNode(imageNamed: nodeImageName)
@@ -257,7 +220,6 @@ class AIGameScene: SKScene {
         
         return CGPoint(x: xPosition, y: yPosition + boardNode.position.y)
     }
-    
     
     fileprivate func processAIMove() {
         // 1
@@ -340,13 +302,17 @@ class AIGameScene: SKScene {
             let item = atPoint(location)
             
             /// Exit and return to GameScene
-            
+            if (item.name == "buttonSprite-Replay") {
+                    self.resetGame()
+                    self.updateGame()
+                }
             if (item.name == "buttonSprite-Menu"){
                 gameViewController.sceneStateMachine.enter(MenuSceneState
                     .self)
+                self.removeAllChildren()
             }
-
+            
         }
     }//END touches Began
-    
 }
+

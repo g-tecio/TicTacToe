@@ -134,6 +134,7 @@ extension Board: GKGameModel {
         
         if let winner = winningPlayer {
             return player == winner
+
         } else {
             return false
         }

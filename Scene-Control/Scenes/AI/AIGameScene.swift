@@ -53,7 +53,7 @@ class AIGameScene: SKScene {
     
     var board = Board()
     var strategist: Strategist!
-    var gameOverTitle: String? = nil
+    
     
     let buttonMenu = SKSpriteNode(imageNamed: "ButtonMenu")
     let turnO = SKSpriteNode(imageNamed: "TurnO")
@@ -130,6 +130,7 @@ class AIGameScene: SKScene {
     }
     
     fileprivate func updateGame() {
+        var gameOverTitle: String? = nil
         
         if let winner = board.winningPlayer, winner == board.currentPlayer {
             gameOverTitle = "\(winner.name) Wins!"
@@ -147,7 +148,10 @@ class AIGameScene: SKScene {
             aiGameControls.turnX.isHidden = true
             aiGameControls.turnO.isHidden = false
         }
-        
+        if (gameOverTitle != nil ) {
+            board.currentPlayer.name = "YOLO"
+            
+        }
         if board.currentPlayer.value == .brain {
                 processAIMove()
         }
@@ -167,17 +171,11 @@ class AIGameScene: SKScene {
         
         var nodeImageName: String
         
-        if (gameOverTitle != nil ) {
-            board.currentPlayer.name = "YOLO"
-            
-        } else {
-        
         //Image Name for the board
         if board.currentPlayer.value == .zombie {
             nodeImageName = "circle"
         } else {
             nodeImageName = "cross"
-        }
         }
         
         let pieceNode = SKSpriteNode(imageNamed: nodeImageName)
